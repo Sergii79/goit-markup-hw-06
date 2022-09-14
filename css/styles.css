@@ -511,13 +511,13 @@ ul {
     transition-timing-function: var(--transition-timing-function);
 }
 
-.backdrop.is-hidden {
+/* .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
-}
+} */
 
 .modal {    
     position: absolute;  
@@ -546,6 +546,53 @@ ul {
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
+
+.register-form {
+    padding: 40px;
+}
+
+.register-form-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+}
+
+.register-form-group {
+    margin-top: 12px;
+}
+
+.label-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.label-form-title {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+}
+
+/* .label-form-title:nth-child(2) {
+    content: "";
+    color: rgba(117, 117, 117, 0.5);
+    fill: #55d455;
+    
+    color: rgb(255, 0, 255);
+    background-color: #88b8df;
+    text-decoration-color: #55d455;
+} */
+
+/* .textarea-form-title {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(194, 30, 30, 0.5);    
+} */
 
 /**
   |============================
