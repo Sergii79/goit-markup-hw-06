@@ -20,7 +20,7 @@
 --social-icon: #AFB1B8;
 --transition-duration: 250ms;
 --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+--modal-label-border-20: #21212133;
 }
 
 body {
@@ -552,29 +552,70 @@ ul {
 }
 
 .register-form-title {
+    display: block;   
     font-weight: 700;
     font-size: 20px;
     line-height: calc(23 / 20);
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
+    margin-bottom: 12px;
 }
 
 .register-form-group {
-    margin-top: 12px;
+    margin-bottom: 20px;
 }
 
 .label-form-group {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
+    display: block;
+    /* display: flex;
+    flex-direction: column;    */
+    margin-bottom: 10px;
+    position: relative;
 }
 
 .label-form-title {
+    display: block;
     margin-bottom: 4px;
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
+}
+
+.input-form-group {  
+    width: 100%;  
+    height: 40px;    
+    padding-left: 42px;
+    padding-right: 42px;
+    border: 1px solid var(--modal-label-border-20);
+    border-radius: 4px;
+    outline: transparent;  
+
+    transition-property: border;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+}
+
+.input-form-group:focus {
+    border: 1px solid var(--accent-text-color);
+}
+
+.register-form-icon {
+    position: absolute;
+    /* top: 30px;
+    left: 15px; */
+    top: 70%;
+    left: 15px;
+    transform: translateY(-70%);
+
+    transition-property: fill;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+
+}
+
+.input-form-group:focus + .register-form-icon {
+    fill: var(--accent-text-color);
 }
 
 /* .label-form-title:nth-child(2) {
@@ -593,6 +634,18 @@ ul {
     letter-spacing: 0.01em;
     color: rgba(194, 30, 30, 0.5);    
 } */
+
+.label-form-register {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    margin-bottom: 30px;
+}
+
+.register-form-button {
+    display: block;
+    margin: 0 auto;
+}
 
 /**
   |============================
