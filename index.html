@@ -67,7 +67,9 @@
             <br />
             вашого бізнесу
           </h1>
-          <button class="button-banner" type="button" data-modal-open>Замовити послугу</button>
+          <button class="button-universal button-banner" type="button" data-modal-open
+            >Замовити послугу</button
+          >
         </div>
 
         <!--modal window-->
@@ -105,25 +107,29 @@
                 <label class="label-form-group" for="">
                   <span class="label-form-title">Коментар</span>
                   <textarea
-                    class="label-form-title textarea-form-title"
+                    class="textarea-form-title"
                     name="comment"
                     rows="10"
                     placeholder="Введіть текст"
                   ></textarea>
                 </label>
               </div>
-              <label for="label-form-register">
-                <input type="checkbox" name="contract" />
-                <svg class="" width="16" height="15">
+              <label class="label-form-register">
+                <input
+                  class="register-form-checkbox visually-hidden"
+                  type="checkbox"
+                  name="contract"
+                />
+                <svg class="register-form-icons" width="16" height="15">
                   <use class="icon-checked" href="./images/icons.svg#checked"></use>
                   <use class="icon-unchecked" href="./images/icons.svg#unchecked"></use>
                 </svg>
-                <span
+                <span class="lead-form-title"
                   >Погоджуюся з розсилкою та приймаю
-                  <a class="link" href="./portfolio.html">Умови договору</a></span
+                  <a class="link link-form-doc" href="" target="_blank">Умови договору</a></span
                 >
               </label>
-              <button class="register-form-button button-banner" type="submit">Відправити</button>
+              <button class="button-universal button-modal" type="submit">Відправити</button>
             </form>
           </div>
         </div>
@@ -520,6 +526,8 @@
       </section>
     </main>
 
+    <!--footer-->
+
     <footer class="footer">
       <div class="container container-footer">
         <div class="left-part">
@@ -603,6 +611,20 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div>
+          <h3 class="subtitle-footer-social">Підпишіться на розсилку</h3>
+          <div class="footer-email-label">
+            <label class="footer-label-email">
+              <input class="footer-input-email" type="email" name="email" placeholder="E-mail" />
+            </label>
+            <button class="button-universal button-footer" type="submit">
+              Підписатися
+              <svg class="social-icon send-icon" width="24" height="24">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </footer>
