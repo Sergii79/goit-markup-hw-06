@@ -71,69 +71,6 @@
             >Замовити послугу</button
           >
         </div>
-
-        <!--modal window-->
-        <div class="backdrop is-hidden" data-modal>
-          <div class="modal">
-            <button class="modal-button" type="button" data-modal-close>
-              <svg class="social-icon" width="11" height="11">
-                <use href="./images/icons.svg#close"></use>
-              </svg>
-            </button>
-            <form class="register-form" name="register-form">
-              <strong class="register-form-title">Залиште свої дані, ми вам передзвонимо</strong>
-              <div class="register-form-group">
-                <label class="label-form-group">
-                  <span class="label-form-title">Ім'я</span>
-                  <input class="input-form-group" type="text" name="name" />
-                  <svg class="register-form-icon" width="15" height="15">
-                    <use href="./images/icons.svg#person"></use>
-                  </svg>
-                </label>
-                <label class="label-form-group">
-                  <span class="label-form-title">Телефон</span>
-                  <input class="input-form-group" type="tel" name="tel" />
-                  <svg class="register-form-icon" width="15" height="15">
-                    <use href="./images/icons.svg#phone"></use>
-                  </svg>
-                </label>
-                <label class="label-form-group">
-                  <span class="label-form-title">Пошта</span>
-                  <input class="input-form-group" type="email" name="email" />
-                  <svg class="register-form-icon" width="15" height="15">
-                    <use href="./images/icons.svg#email"></use>
-                  </svg>
-                </label>
-                <label class="label-form-group" for="">
-                  <span class="label-form-title">Коментар</span>
-                  <textarea
-                    class="textarea-form-title"
-                    name="comment"
-                    rows="10"
-                    placeholder="Введіть текст"
-                  ></textarea>
-                </label>
-              </div>
-              <label class="label-form-register">
-                <input
-                  class="register-form-checkbox visually-hidden"
-                  type="checkbox"
-                  name="contract"
-                />
-                <svg class="register-form-icons" width="16" height="15">
-                  <use class="icon-checked" href="./images/icons.svg#checked"></use>
-                  <use class="icon-unchecked" href="./images/icons.svg#unchecked"></use>
-                </svg>
-                <span class="lead-form-title"
-                  >Погоджуюся з розсилкою та приймаю
-                  <a class="link link-form-doc" href="" target="_blank">Умови договору</a></span
-                >
-              </label>
-              <button class="button-universal button-modal" type="submit">Відправити</button>
-            </form>
-          </div>
-        </div>
-        <script src="./js/modal.js"></script>
       </section>
 
       <!--main content-->
@@ -527,7 +464,6 @@
     </main>
 
     <!--footer-->
-
     <footer class="footer">
       <div class="container container-footer">
         <div class="left-part">
@@ -612,8 +548,8 @@
             </li>
           </ul>
         </div>
-        <div>
-          <h3 class="subtitle-footer-social">Підпишіться на розсилку</h3>
+        <form class="register-email" name="register-email">
+          <strong class="subtitle-footer-social">Підпишіться на розсилку</strong>
           <div class="footer-email-label">
             <label class="footer-label-email">
               <input class="footer-input-email" type="email" name="email" placeholder="E-mail" />
@@ -625,8 +561,67 @@
               </svg>
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </footer>
+
+    <!--modal window-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-button" type="button" data-modal-close>
+          <svg class="social-icon" width="11" height="11">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+        <form class="register-form" name="register-form">
+          <strong class="register-form-title">Залиште свої дані, ми вам передзвонимо</strong>
+          <div class="register-form-group">
+            <label class="label-form-group">
+              <span class="label-form-title">Ім'я</span>
+              <input class="input-form-group" type="text" name="name" />
+              <svg class="register-form-icon" width="15" height="15">
+                <use href="./images/icons.svg#person"></use>
+              </svg>
+            </label>
+            <label class="label-form-group">
+              <span class="label-form-title">Телефон</span>
+              <input class="input-form-group" type="tel" name="tel" />
+              <svg class="register-form-icon" width="15" height="15">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </label>
+            <label class="label-form-group">
+              <span class="label-form-title">Пошта</span>
+              <input class="input-form-group" type="email" name="email" />
+              <svg class="register-form-icon" width="15" height="15">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+            </label>
+            <label class="label-form-group label-form-group">
+              <span class="label-form-title">Коментар</span>
+              <textarea
+                class="textarea-form-title"
+                name="comment"
+                rows="10"
+                placeholder="Введіть текст"
+              ></textarea>
+            </label>
+          </div>
+          <label class="label-form-register">
+            <input class="register-form-checkbox visually-hidden" type="checkbox" name="contract" />
+            <svg class="register-form-icons" width="16" height="15">
+              <use class="icon-checked" href="./images/icons.svg#checked"></use>
+              <use class="icon-unchecked" href="./images/icons.svg#unchecked"></use>
+            </svg>
+            <span class="lead-form-title"
+              >Погоджуюся з розсилкою та приймаю
+              <a class="link link-form-doc" href="" target="_blank">Умови договору</a></span
+            >
+          </label>
+          <button class="button-universal button-modal" type="submit">Відправити</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
